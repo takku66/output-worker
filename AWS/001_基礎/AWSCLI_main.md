@@ -19,7 +19,7 @@ https://dev.classmethod.jp/articles/aws-cli_initial_setting/
   ```
 
   - 上記でデフォルトのクレデンシャル情報が設定できる。中身は以下で確認できる。
-  ```
+  ```sh
   $ cat credentials
     [default]
     aws_access_key_id = {アクセスキーID}
@@ -27,16 +27,19 @@ https://dev.classmethod.jp/articles/aws-cli_initial_setting/
   ```
 
 - 複数環境でCLIを切り替えたい場合  
-→ プロファイルを使用する。
-  ```
+→ プロファイルを使用する。  
+
+  ```sh
   $ aws configure --profile {プロファイル名}
-　  AWS Access Key ID [None]: {アクセスキーID}
+    AWS Access Key ID [None]: {アクセスキーID}
     AWS Secret Access Key [None]: {シークレットアクセスキー}
     Default region name [None]: ap-northeast-1
     Default output format [None]: json
   ```
 
+
   - 仮に`sample-A`と`sample-B`で分けた場合は、以下のような内容となる。
+
   ```
   $ cat credentials
     [sample-A]
